@@ -1,6 +1,6 @@
 FROM node:24-alpine AS build
 # bun installs; node runs `next build` itself.
-COPY --from=oven/bun:1.3.13-alpine /usr/local/bin/bun /usr/local/bin/bun
+COPY --from=oven/bun:1.4.5-alpine /usr/local/bin/bun /usr/local/bin/bun
 WORKDIR /app
 COPY package.json bun.lock ./
 RUN bun install --frozen-lockfile

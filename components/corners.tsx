@@ -57,12 +57,6 @@ export function CornerLabel({
   )
 }
 
-/** The tips on Privacy and Terms, which www.zyx.tw's own links share. */
-export const LEGAL_TIPS = {
-  privacy: "What we store",
-  terms: "The rules",
-}
-
 /**
  * Privacy and Terms, which every zyx.tw site shares at www.zyx.tw. They lead
  * the bottom left corner; the labels and their tips follow the site's
@@ -70,23 +64,17 @@ export const LEGAL_TIPS = {
  */
 export function LegalLinks({
   labels = { privacy: "Privacy", terms: "Terms" },
-  tips = LEGAL_TIPS,
 }: {
   labels?: { privacy: string; terms: string }
-  tips?: { privacy: string; terms: string }
 }) {
   return (
     <>
-      <CornerTip tip={tips.privacy}>
-        <a href="https://www.zyx.tw/privacy" className={cornerLink}>
-          {labels.privacy}
-        </a>
-      </CornerTip>
-      <CornerTip tip={tips.terms}>
-        <a href="https://www.zyx.tw/terms" className={cornerLink}>
-          {labels.terms}
-        </a>
-      </CornerTip>
+      <a href="https://www.zyx.tw/privacy" className={cornerLink}>
+        {labels.privacy}
+      </a>
+      <a href="https://www.zyx.tw/terms" className={cornerLink}>
+        {labels.terms}
+      </a>
     </>
   )
 }
