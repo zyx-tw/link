@@ -3,9 +3,9 @@
 import JSConfetti from "js-confetti"
 import { useActionState, useEffect, useRef } from "react"
 
-import { Button } from "@workspace/ui/components/ui/button"
-import { Input } from "@workspace/ui/components/ui/input"
-import { Spinner } from "@workspace/ui/components/ui/spinner"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Spinner } from "@/components/ui/spinner"
 
 import { SITE_DESC, SITE_NAME } from "@/lib/site"
 import { createShortLink } from "@/app/actions"
